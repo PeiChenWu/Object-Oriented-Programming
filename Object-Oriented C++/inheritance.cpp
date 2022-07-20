@@ -83,7 +83,16 @@ class Superhero : public Person {
             cout << "My namesis is " << namesis << '.' << endl;
         }
 
+        void SayHello() {
+            cout << "My name is " << GetName() << ", and criminals fear me." << endl;
+        }
+
+        void SayAge() {
+            cout << "Age is just a number." << endl;
+        }
+
 };
+
 
 
 int main() {
@@ -95,6 +104,11 @@ int main() {
     cout << hero.GetNemesis() << endl;
     hero.RevealSecretIdentity();
     hero.SayNamesis();
+
+    hero.SayHello();
+    hero.Person::SayHello();
+    hero.SayAge();
+    hero.Person::SayAge();
 
     return 0;
 }
